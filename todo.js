@@ -2,12 +2,12 @@
 // 課題1についてのヒントを記載しています
 
 // まずは、ulタグdocumet.querySelectorで取得します
-const ul = document.querySelector("ul")
+
 //　form タグをまずは、documet.querySelectorで取得します
 const form = document.querySelector("form")
 
 // "todo"というidがついているinputタグをdocument.getElementByIdで取得して,todoInputという変数に格納してください
-const todoInput = document.getElementById("todo")
+
 
 // formタグのsubmitイベントをaddEventListenerを用いて登録してください
 form.addEventListener("submit", (e) => {
@@ -16,44 +16,43 @@ form.addEventListener("submit", (e) => {
 
   // タスク一個を表すためのliタグを作成します
   // liタグはcreateElementを用いて作成してください。
-  const li = document.createElement("li")
+  
 
   // liタグのテキストには、todoInput.valueを代入してください
-  li.innerHTML = todoInput.value
-  console.log(li)
+ 
 
   //todoInput.value = ""でtodoInputのvalueを空にします
-  todoInput.value = ""
+  
 
   // liタグをulタグの子要素に追加してください
-  ul.appendChild(li)
+  
 
   //ここまで作成するとタスクを追加することができるようになります.
   // live serverからindex.htmlを起動して、確認してみましょう！
 
   // ここからは、削除ボタンを作成していきます
   // まずは、documet.createElementを用いてbuttonタグを作成してください.
-  const deleteButton = document.createElement("button")
+  
 
   // buttonタグのテキストは、"削除"を代入します
   // deleteButton.textContentを用いてテキストを代入することができます
-  deleteButton.textContent = "削除"
+  
 
   //deleteButtonをliタグの子要素に追加してください
   //li.appendChild(追加したい要素)で追加することができます
-  li.appendChild(deleteButton)
+  
 
   //次に、deleteButtonを押したときに、liタグを削除する処理を記載していきます
   //buttonタグのclickイベントをaddEventListenerを用いて登録してください
   //button.addEventListener("click", (e)=>{})で登録することができます
-  deleteButton.addEventListener("click", (e) => {
+ 
     //ここからは、button.addEventListenerの関数の中で行う処理を記載していきます
     // e.target.parentElementを用いて、buttonの親要素であるliタグを取得してください
     // e.targetは、イベントが発生した要素を取得することができます
-    e.target.parentElement.remove()
+    
     //ここまで記載すると、削除ボタンを押したときに、タスクが削除されるようになります
     // live serverからindex.htmlを起動して、確認してみましょう！
-  })
+ 
 
   // 課題2についてのヒントを記載しています
   // 基本的にform.addEventListener("submit", (e)=>{})の中でやってもらいます
@@ -64,7 +63,8 @@ form.addEventListener("submit", (e) => {
 
   // checkboxをliタグの子要素に追加してください
 
-  //checkboxが変化したときのイベントをaddEventListenerを用いて登録してください //checkbox.addEventListener("change", (e)=>{})で登録することができます
+  //checkboxが変化したときのイベントをaddEventListenerを用いて登録してください 
+  //checkbox.addEventListener("change", (e)=>{})で登録することができます
   //ここからは,checkbox.addEventListenerの関数の中で行う処理を記載していきます
 
   //if文を用いてe.currentTarget.checkedがtrueの時とfalseの時で処理を分けてください
