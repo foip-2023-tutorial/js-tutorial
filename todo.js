@@ -30,6 +30,7 @@ form.addEventListener("submit", (e) => {
   //ここまで作成するとタスクを追加することができるようになります.
   // live serverからindex.htmlを起動して、確認してみましょう！
 
+  // 課題2についてのヒントを記載しています
   // ここからは、削除ボタンを作成していきます
   // まずは、documet.createElementを用いてbuttonタグを作成してください.
   
@@ -54,7 +55,7 @@ form.addEventListener("submit", (e) => {
     // live serverからindex.htmlを起動して、確認してみましょう！
  
 
-  // 課題2についてのヒントを記載しています
+  // 応用課題1-aについてのヒントを記載しています
   // 基本的にform.addEventListener("submit", (e)=>{})の中でやってもらいます
   // type属性checkboxのinputタグを作成してください
   // inputタグはcreateElementを用いて作成してください。
