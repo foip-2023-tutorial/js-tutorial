@@ -2,10 +2,11 @@
 // 課題1についてのヒントを記載しています
 
 // まずは、ulタグdocumet.querySelectorで取得します
-
+const ul = document
 //　form タグをまずは、documet.querySelectorで取得します
 const form = document.querySelector("form")
 // "todo"というidがついているinputタグをdocument.getElementByIdで取得して,todoInputという変数に格納してください
+const todoInput = document.getElementById("todo")
 
 // formタグのsubmitイベントをaddEventListenerを用いて登録してください
 form.addEventListener("submit", (e) => {
@@ -13,8 +14,10 @@ form.addEventListener("submit", (e) => {
   e.preventDefault()
   // タスク一個を表すためのliタグを作成します
   // liタグはcreateElementを用いて作成してください。
+  const li = document.createElement("li")
 
   // liタグのテキストには、todoInput.valueを代入してください
+  li.textContent = todoInput.value
 
   //button.textContentを用いてテキストを代入することができます
 
