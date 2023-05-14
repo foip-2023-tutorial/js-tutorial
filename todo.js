@@ -2,9 +2,10 @@
 // 課題1についてのヒントを記載しています
 
 // まずは、ulタグdocumet.querySelectorで取得します
-const ul = document
+const ul = document.querySelector("ul")
 //　form タグをまずは、documet.querySelectorで取得します
 const form = document.querySelector("form")
+
 // "todo"というidがついているinputタグをdocument.getElementByIdで取得して,todoInputという変数に格納してください
 const todoInput = document.getElementById("todo")
 
@@ -12,44 +13,47 @@ const todoInput = document.getElementById("todo")
 form.addEventListener("submit", (e) => {
   // e.preventDefault()を用いてデフォルトのイベントをキャンセルしてください
   e.preventDefault()
+
   // タスク一個を表すためのliタグを作成します
   // liタグはcreateElementを用いて作成してください。
   const li = document.createElement("li")
 
   // liタグのテキストには、todoInput.valueを代入してください
-  li.textContent = todoInput.value
-
-  //button.textContentを用いてテキストを代入することができます
+  li.innerHTML = todoInput.value
+  console.log(li)
 
   //todoInput.value = ""でtodoInputのvalueを空にします
+  todoInput.value = ""
 
   // liタグをulタグの子要素に追加してください
+  ul.appendChild(li)
 
   //ここまで作成するとタスクを追加することができるようになります.
   // live serverからindex.htmlを起動して、確認してみましょう！
 
   // ここからは、削除ボタンを作成していきます
   // まずは、documet.createElementを用いてbuttonタグを作成してください.
+  const deleteButton = document.createElement("button")
 
   // buttonタグのテキストは、"削除"を代入します
   // deleteButton.textContentを用いてテキストを代入することができます
+  deleteButton.textContent = "削除"
 
   //deleteButtonをliタグの子要素に追加してください
   //li.appendChild(追加したい要素)で追加することができます
+  li.appendChild(deleteButton)
 
   //次に、deleteButtonを押したときに、liタグを削除する処理を記載していきます
   //buttonタグのclickイベントをaddEventListenerを用いて登録してください
   //button.addEventListener("click", (e)=>{})で登録することができます
-
-  //ここからは、button.addEventListenerの関数の中で行う処理を記載していきます
-  // e.target.parentElementを用いて、buttonの親要素であるliタグを取得してください
-
-  // e.targetは、イベントが発生した要素を取得することができます
-
-  // li.remove()を用いて、liタグを削除してください
-
-  //ここまで記載すると、削除ボタンを押したときに、タスクが削除されるようになります
-  // live serverからindex.htmlを起動して、確認してみましょう！
+  deleteButton.addEventListener("click", (e) => {
+    //ここからは、button.addEventListenerの関数の中で行う処理を記載していきます
+    // e.target.parentElementを用いて、buttonの親要素であるliタグを取得してください
+    // e.targetは、イベントが発生した要素を取得することができます
+    e.target.parentElement.remove()
+    //ここまで記載すると、削除ボタンを押したときに、タスクが削除されるようになります
+    // live serverからindex.htmlを起動して、確認してみましょう！
+  })
 
   // 課題2についてのヒントを記載しています
   // 基本的にform.addEventListener("submit", (e)=>{})の中でやってもらいます
