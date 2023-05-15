@@ -58,14 +58,12 @@ form.addEventListener("submit", (e) => {
   // 応用課題1-aについてのヒントを記載しています
   // 基本的にform.addEventListener("submit", (e)=>{})の中でやってもらいます
   // type属性checkboxのinputタグを作成してください
-  // inputタグはcreateElementを用いて作成してください。
 
   // checkbox.type = "checkbox"でtype属性をcheckboxに変更してます
 
   // checkboxをliタグの子要素に追加してください
 
   //checkboxが変化したときのイベントをaddEventListenerを用いて登録してください 
-  //checkbox.addEventListener("change", (e)=>{})で登録することができます
   //ここからは,checkbox.addEventListenerの関数の中で行う処理を記載していきます
 
   //if文を用いてe.currentTarget.checkedがtrueの時とfalseの時で処理を分けてください
