@@ -50,6 +50,7 @@ form.addEventListener("submit", (e) => {
     //ここからは、button.addEventListenerの関数の中で行う処理を記載していきます
     // e.target.parentElementを用いて、buttonの親要素であるliタグを取得してください
     // e.targetは、イベントが発生した要素を取得することができます
+    // removeを使うと要素を削除することができます
     
     //ここまで記載すると、削除ボタンを押したときに、タスクが削除されるようになります
     // live serverからindex.htmlを起動して、確認してみましょう！
