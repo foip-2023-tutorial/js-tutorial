@@ -36,7 +36,7 @@ form.addEventListener("submit", (e) => {
   
 
   // buttonタグのテキストは、"削除"を代入します
-  // deleteButton.textContentを用いてテキストを代入することができます
+  // textContentを用いてテキストを代入することができます
   
 
   //deleteButtonをliタグの子要素に追加してください
