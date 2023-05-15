@@ -1,7 +1,7 @@
 // 課題について基本的にはJSファイルをいじります
 // 課題1についてのヒントを記載しています
 
-// まずは、ulタグdocumet.querySelectorで取得します
+// まずは、ulタグをdocumet.querySelectorで取得します
 
 //　form タグをまずは、documet.querySelectorで取得します
 const form = document.querySelector("form")
